@@ -1,0 +1,6 @@
+D:\CDP\Automation Training\Jenkins\TATJenkinsApp\tat-jenkins\ConsoleApp\bin\Debug\ConsoleApp.exe.config
+D:\CDP\Automation Training\Jenkins\TATJenkinsApp\tat-jenkins\ConsoleApp\bin\Debug\ConsoleApp.exe
+D:\CDP\Automation Training\Jenkins\TATJenkinsApp\tat-jenkins\ConsoleApp\bin\Debug\ConsoleApp.pdb
+D:\CDP\Automation Training\Jenkins\TATJenkinsApp\tat-jenkins\ConsoleApp\obj\Debug\ConsoleApp.csprojResolveAssemblyReference.cache
+D:\CDP\Automation Training\Jenkins\TATJenkinsApp\tat-jenkins\ConsoleApp\obj\Debug\ConsoleApp.exe
+D:\CDP\Automation Training\Jenkins\TATJenkinsApp\tat-jenkins\ConsoleApp\obj\Debug\ConsoleApp.pdb
