@@ -8,6 +8,7 @@ namespace ConsoleApp
         {
             Console.WriteLine("Hello world!");
             Console.WriteLine("Additional test info");
+            Console.WriteLine("Check git repo commit");
 
             Console.ReadKey();
         }
