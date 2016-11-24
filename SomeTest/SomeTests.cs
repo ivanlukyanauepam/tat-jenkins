@@ -1,8 +1,6 @@
 ﻿namespace SomeTest
 {
     using System;
-    using System.IO;
-    using System.Linq;
     using NUnit.Framework;
 
     [TestFixture]
@@ -22,6 +20,8 @@
             // Can also specify the class to which the property is found upon.
             Assert.That(a + b, Is.EqualTo(Decimal.Parse(c)));
         }
+
+
 
     }
 }
