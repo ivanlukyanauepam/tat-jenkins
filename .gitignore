@@ -1,6 +1,8 @@
 #Visual Studio files
 *.suo
 obj/
+[Pp]ackages/
+!packages/repositories.config
 [Bb]in
 [Dd]ebug*/
 [Rr]elease*/
