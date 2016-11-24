@@ -36,6 +36,10 @@
       <HintPath>..\ConsoleApp\packages\NUnit.3.5.0\lib\net45\nunit.framework.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="RelevantCodes.ExtentReports, Version=1.4.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\ConsoleApp\packages\ExtentReports.2.41.0\lib\RelevantCodes.ExtentReports.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -56,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BrowserTests.cs" />
+    <Compile Include="Managers\ExtentManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SomeTests.cs" />
   </ItemGroup>
