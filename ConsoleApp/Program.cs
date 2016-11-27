@@ -1,6 +1,9 @@
 ﻿namespace ConsoleApp
 {
     using System;
+
+    using ILuFramework;
+
     using log4net;
 
     class Program
@@ -14,6 +17,12 @@
             log.Info("Additional test info");
             //Console.WriteLine("Check git repo commit");
             log.Info("Check git repo commit");
+
+            if (Browser.Driver != null)
+            {
+                var driver = Browser.Driver;
+                log.Info(driver.Url);
+            }
 
             Console.ReadKey();
         }

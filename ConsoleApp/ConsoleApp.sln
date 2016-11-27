@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp.cs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SomeTest", "..\SomeTest\SomeTest.csproj", "{C605D143-2A5B-4DE3-994B-8B13B247E4AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILuFramework", "..\ILuFramework\ILuFramework.csproj", "{4E37596C-F87A-4D68-B865-2982885AF6A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C605D143-2A5B-4DE3-994B-8B13B247E4AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C605D143-2A5B-4DE3-994B-8B13B247E4AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C605D143-2A5B-4DE3-994B-8B13B247E4AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E37596C-F87A-4D68-B865-2982885AF6A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E37596C-F87A-4D68-B865-2982885AF6A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E37596C-F87A-4D68-B865-2982885AF6A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E37596C-F87A-4D68-B865-2982885AF6A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
