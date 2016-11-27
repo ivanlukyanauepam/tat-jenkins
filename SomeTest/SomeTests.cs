@@ -10,7 +10,7 @@
         {
             new object[] { 1, 1.1m, "2.1" },
             new object[] { 2, 2.2m, "4.2" },
-            new object[] { 3, 3.3m, "6.3" },
+            new object[] { 3, 3.3m, "6.3" }
         };
 
         // just to test work with source

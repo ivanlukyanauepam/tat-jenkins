@@ -63,6 +63,7 @@
     <Compile Include="BrowserType.cs" />
     <Compile Include="LoginTests.cs" />
     <Compile Include="Managers\ExtentManager.cs" />
+    <Compile Include="MultipleWindowsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SomeTests.cs" />
   </ItemGroup>
