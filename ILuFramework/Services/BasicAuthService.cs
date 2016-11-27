@@ -12,7 +12,7 @@
 
         public BasicAuthService(string browserType)
         {
-            BrowserType type = BrowserType.Chrome;
+            BrowserType type = BrowserType.ChromeIncognito;
             Enum.TryParse<BrowserType>(browserType, out type);
 
             this.page = new BasicAuthPage(type);

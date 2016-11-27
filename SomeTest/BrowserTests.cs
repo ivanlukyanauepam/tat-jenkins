@@ -16,7 +16,7 @@
         public ExtentTest test;
 
 
-        [SetUp]
+        //[SetUp]
         protected void Init()
         {
             ChromeOptions options = new ChromeOptions();
@@ -29,7 +29,7 @@
             driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
         }
 
-        [OneTimeSetUp]
+        //[OneTimeSetUp]
         public void StartReport()
         {
             string path = System.Reflection.Assembly.GetCallingAssembly().CodeBase;
@@ -45,7 +45,7 @@
             extent.LoadConfig(projectPath + "extent-config.xml");
         }
 
-        [Test]
+        //[Test]
         public void BasicAuthTest()
         {
             test = extent.StartTest("BasicAuthTest");
@@ -65,13 +65,13 @@
             test.Log(LogStatus.Pass, "Auth was successfully passed.");
         }
 
-        [TearDown]
+        //[TearDown]
         protected void Clear()
         {
             driver.Quit();
         }
 
-        [OneTimeTearDown]
+        //[OneTimeTearDown]
         public void EndReport()
         {
             extent.EndTest(test);
