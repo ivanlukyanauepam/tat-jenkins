@@ -40,7 +40,12 @@
                     driver = new FirefoxDriver();
                     break;
                 case BrowserType.Chrome:
-                    driver = new ChromeDriver();
+                    {
+                        ChromeOptions options = new ChromeOptions();
+                        options.AddArguments("--incognito");
+                        driver = new ChromeDriver(options);
+
+                    }
                     break;
                 default:
                     driver = new ChromeDriver();
