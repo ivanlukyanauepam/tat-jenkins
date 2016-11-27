@@ -1,7 +1,5 @@
 ﻿namespace ILuFramework.Pages
 {
-    using System;
-
     using ILuFramework.Helpers;
 
     using OpenQA.Selenium;

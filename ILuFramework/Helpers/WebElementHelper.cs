@@ -1,5 +1,7 @@
 ﻿namespace ILuFramework.Helpers
 {
+    using System.Collections.Generic;
+
     using OpenQA.Selenium;
 
     public static class WebElementHelper
@@ -20,6 +22,12 @@
         {
             By tagSelector = By.TagName(selector);
             return driver.FindElement(tagSelector);
+        }
+
+        public static IEnumerable<IWebElement> FindElementsByCss(this IWebDriver driver, string selector)
+        {
+            By cssSelector = By.CssSelector(selector);
+            return driver.FindElements(cssSelector);
         }
     }
 }
