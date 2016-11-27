@@ -60,9 +60,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BasicAuthTests.cs" />
-    <Compile Include="BrowserTests.cs" />
-    <Compile Include="BrowserType.cs" />
-    <Compile Include="ExtentReportBase.cs" />
+    <Compile Include="Infrastructure\BrowserTests.cs" />
+    <Compile Include="Infrastructure\BrowserType.cs" />
+    <Compile Include="Infrastructure\ExtentReportBase.cs" />
     <Compile Include="LoginTests.cs" />
     <Compile Include="Managers\ExtentManager.cs" />
     <Compile Include="MultipleWindowsTests.cs" />
