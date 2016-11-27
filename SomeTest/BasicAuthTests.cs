@@ -13,8 +13,7 @@
         [SetUp]
         public void BeforeTest()
         {
-            service = new BasicAuthService(BrowserType.Chrome.ToString());
-
+            service = new BasicAuthService(BrowserType.ChromeIncognito.ToString());
         }
 
         [Test]

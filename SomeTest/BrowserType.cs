@@ -3,6 +3,7 @@
     public enum BrowserType
     {
         Chrome = 1,
-        Firefox
+        Firefox,
+        ChromeIncognito
     }
 }
