@@ -8,6 +8,22 @@
     {
         protected readonly BrowserInstance Browser;
 
+        protected virtual string Url
+        {
+            get
+            {
+                return "http://the-internet.herokuapp.com/";
+            }
+        }
+
+        protected virtual string HeaderLocator
+        {
+            get
+            {
+                return "div > h3";
+            }
+        }
+
         //protected string HeaderSelector { get; set; }
 
         protected AbstractPage()
@@ -20,10 +36,15 @@
             this.Browser = BrowserInstance.Get(browser);
         }
 
-        //protected virtual IWebElement GetPageHeader()
-        //{
-        //    return Browser.Driver.FindByCss(HeaderSelector);
-        //}
+        public IWebElement GetHeaderPage()
+        {
+            return Browser.Driver.FindByCss("div > h3");
+        }
+
+        public void Open()
+        {
+            Browser.GoTo(Url);
+        }
 
         public void Close()
         {
