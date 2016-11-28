@@ -46,7 +46,9 @@
 
         public void ClickOnTheLinkWithText(string text)
         {
-            this.FindLinkWithText(text).Click();
+            Browser.Driver.FindElementsByCss(newPageLinkLocator)
+                          .FindByText(text)
+                          .Click();
         }
 
         public void MoveToRecentlyOpenedTab()

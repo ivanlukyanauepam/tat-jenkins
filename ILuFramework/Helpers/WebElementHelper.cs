@@ -24,10 +24,23 @@
             return driver.FindElement(tagSelector);
         }
 
-        public static IEnumerable<IWebElement> FindElementsByCss(this IWebDriver driver, string selector)
+        public static IReadOnlyCollection<IWebElement> FindElementsByCss(this IWebDriver driver, string selector)
         {
             By cssSelector = By.CssSelector(selector);
             return driver.FindElements(cssSelector);
+        }
+
+        public static IWebElement FindByText(this IReadOnlyCollection<IWebElement> collection, string text)
+        {
+            foreach (var item in collection)
+            {
+                if (item.Text.Equals(text, System.StringComparison.OrdinalIgnoreCase))
+                {
+                    return item;
+                }
+            }
+
+            return null;
         }
     }
 }
