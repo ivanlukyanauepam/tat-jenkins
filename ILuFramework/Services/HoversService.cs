@@ -5,6 +5,7 @@
     using ILuFramework.Pages;
 
     using OpenQA.Selenium;
+    using OpenQA.Selenium.Interactions;
 
     public class HoversService
     {
@@ -32,6 +33,14 @@
             this.page.Close();
         }
 
+        public IWebElement MoveOverElementAndReturnViewProfileLink(int index)
+        {
+            var figures = page.GetFigures();
+            var figure = (IWebElement)figures[index];
+
+            this.page.MoveOverElement(figure);
+            return this.page.GetViewProfileResultElement(figure);
+        }
 
     }
 }

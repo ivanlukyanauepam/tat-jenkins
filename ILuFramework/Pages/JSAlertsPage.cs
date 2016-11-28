@@ -6,13 +6,15 @@
 
     public class JSAlertsPage : AbstractPage
     {
-        private readonly string url;
         private readonly string pageButtonsLocator;
         private readonly string resultElementLocator;
 
-        public IWebElement GetHeaderPage()
+        protected override string Url
         {
-            return Browser.Driver.FindByCss("div > h3");
+            get
+            {
+                return $"{base.Url}/javascript_alerts";
+            }
         }
 
         public IWebElement GetResult()
@@ -22,8 +24,6 @@
 
         public JSAlertsPage(BrowserType browser) : base(browser)
         {
-            this.url = "http://the-internet.herokuapp.com/javascript_alerts";
-
             this.pageButtonsLocator = "div > ul > li > button";
             this.resultElementLocator = "result";
         }
@@ -43,11 +43,6 @@
         {
             Browser.Driver.FindElementsByCss(pageButtonsLocator).FindByText("Click for JS Prompt").Click();
 
-        }
-
-        public void Open()
-        {
-            Browser.GoTo(url);
         }
 
         public void SwithToAlertAndAccept()

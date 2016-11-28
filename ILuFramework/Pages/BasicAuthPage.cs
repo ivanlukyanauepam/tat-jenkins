@@ -8,13 +8,14 @@
 
     public class BasicAuthPage : AbstractPage
     {
-        private readonly string url;
-        private readonly string headerLocator;
         private readonly string congratsLocator;
 
-        public IWebElement GetHeaderPage()
+        protected override string Url
         {
-            return Browser.Driver.FindByCss(headerLocator);
+            get
+            {
+                return $"{base.Url}/basic_auth";
+            }
         }
 
         public IWebElement GetCongratsParagraph()
@@ -26,8 +27,6 @@
 
         public BasicAuthPage(BrowserType browser) : base(browser)
         {
-            this.headerLocator = "div > h3";
-            this.url = "http://the-internet.herokuapp.com/basic_auth";
             this.congratsLocator = "div > p";
         }
 

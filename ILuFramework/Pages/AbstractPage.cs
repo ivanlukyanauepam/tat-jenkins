@@ -38,10 +38,10 @@
 
         public IWebElement GetHeaderPage()
         {
-            return Browser.Driver.FindByCss("div > h3");
+            return Browser.Driver.FindByCss(HeaderLocator);
         }
 
-        public void Open()
+        public virtual void Open()
         {
             Browser.GoTo(Url);
         }

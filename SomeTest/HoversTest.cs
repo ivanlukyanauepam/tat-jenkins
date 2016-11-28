@@ -7,12 +7,12 @@
     [Parallelizable(ParallelScope.Fixtures)]
     public class HoversTest
     {
-        private HeversService service;
+        private HoversService service;
 
         [SetUp]
         public void BeforeTest()
         {
-            service = new HeversService(BrowserType.Chrome.ToString());
+            service = new HoversService(BrowserType.Chrome.ToString());
             service.OpenPage();
 
         }

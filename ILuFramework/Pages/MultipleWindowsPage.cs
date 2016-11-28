@@ -9,24 +9,23 @@
 
     public class MultipleWindowsPage : AbstractPage
     {
-        private readonly string url;
-        private readonly string headerLocator;
         private readonly string newPageLinkLocator;
 
-        public IWebElement GetHeaderPage()
+        protected override string Url
         {
-            return Browser.Driver.FindByCss(headerLocator);
+            get
+            {
+                return $"{base.Url}/windows";
+            }
         }
+
 
         public MultipleWindowsPage() : base() { }
 
         public MultipleWindowsPage(BrowserType browser) : base(browser)
         {
             this.newPageLinkLocator = "div > a";
-            this.headerLocator = "div > h3";
-            this.url = "http://the-internet.herokuapp.com/windows";
         }
-
 
         // potentially could be included into the driver's actions through the extension mechanism
         public IWebElement FindLinkWithText(string text)
@@ -55,11 +54,5 @@
         {
             Browser.Driver.SwitchTo().Window(Browser.Driver.WindowHandles[Browser.Driver.WindowHandles.Count - 1]);
         }
-
-        public void Open()
-        {
-            Browser.GoTo(this.url);
-        }
-
     }
 }
