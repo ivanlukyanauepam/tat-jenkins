@@ -21,11 +21,26 @@
             //Console.WriteLine("Check git repo commit");
             log.Info("Check git repo commit");
 
-            if (Browser.Driver != null)
-            {
-                var driver = Browser.Driver;
-                log.Info(driver.Url);
-            }
+            //if (Browser.Driver != null)
+            //{
+            //    var driver = Browser.Driver;
+            //    log.Info(driver.Url);
+            //}
+
+            Console.WriteLine("My User Scope settings throug the Properties.Settings.Default :");
+            Console.WriteLine(Properties.Settings.Default.Sex);
+            Console.WriteLine(Properties.Settings.Default.MyName);
+            Console.WriteLine("Lets change the Sex property at runtime");
+            Properties.Settings.Default.Sex = "Female";
+            Properties.Settings.Default.Save();
+            Console.WriteLine(Properties.Settings.Default.Sex);
+
+
+            Console.WriteLine("My Application Scope settings throug the Properties.Settings.Default :");
+            Console.WriteLine(Properties.Settings.Default.AppType);
+
+            Console.WriteLine("Lets read a new group of settings.");
+            Console.WriteLine(Properties.Custom.Default.MyName);
 
             Console.ReadKey();
         }

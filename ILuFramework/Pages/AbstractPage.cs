@@ -24,8 +24,6 @@
             }
         }
 
-        //protected string HeaderSelector { get; set; }
-
         protected AbstractPage()
         {
             this.Browser = BrowserInstance.Get();

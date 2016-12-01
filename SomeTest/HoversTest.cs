@@ -5,6 +5,7 @@
     using NUnit.Framework;
 
     [Parallelizable(ParallelScope.Fixtures)]
+    [TestFixture]
     public class HoversTest
     {
         private HoversService service;

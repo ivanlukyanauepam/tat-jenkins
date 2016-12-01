@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BasicAuthTests.cs" />
+    <Compile Include="HorizontalSliderTests.cs" />
     <Compile Include="HoversTest.cs" />
     <Compile Include="Infrastructure\BrowserTests.cs" />
     <Compile Include="Infrastructure\BrowserType.cs" />
