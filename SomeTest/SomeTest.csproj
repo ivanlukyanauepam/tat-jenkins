@@ -65,6 +65,7 @@
     <Compile Include="Infrastructure\BrowserTests.cs" />
     <Compile Include="Infrastructure\BrowserType.cs" />
     <Compile Include="Infrastructure\ExtentReportBase.cs" />
+    <Compile Include="JQueryUITests.cs" />
     <Compile Include="JSAlertsTests.cs" />
     <Compile Include="LoginTests.cs" />
     <Compile Include="Managers\ExtentManager.cs" />
