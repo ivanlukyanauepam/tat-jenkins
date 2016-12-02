@@ -6,7 +6,7 @@
 
     //[Parallelizable(ParallelScope.Fixtures)]
     [TestFixture]
-    public class HorizontalSliderTests
+    public class HorizontalSliderTests : BaseTest
     {
         private HorizontalSliderService service;
 

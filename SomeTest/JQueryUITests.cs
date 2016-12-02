@@ -11,7 +11,7 @@
 
     //[Parallelizable(ParallelScope.Fixtures)]
     [TestFixture]
-    public class JQueryUITests
+    public class JQueryUITests : BaseTest
     {
         private JQueryUIService service;
 

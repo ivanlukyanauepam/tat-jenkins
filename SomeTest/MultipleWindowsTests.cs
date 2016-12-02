@@ -6,7 +6,7 @@
 
     //[Parallelizable(ParallelScope.Fixtures)]
     [TestFixture]
-    public class MultipleWindowsTests
+    public class MultipleWindowsTests : BaseTest
     {
         private MultipleWindowsService service;
 

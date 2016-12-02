@@ -6,7 +6,7 @@
 
     //[Parallelizable(ParallelScope.Fixtures)]
     [TestFixture]
-    public class LoginTests
+    public class LoginTests : BaseTest
     {
         private LoginService service;
 

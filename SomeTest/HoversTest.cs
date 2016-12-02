@@ -6,7 +6,7 @@
 
     //[Parallelizable(ParallelScope.Fixtures)]
     [TestFixture]
-    public class HoversTest
+    public class HoversTest : BaseTest
     {
         private HoversService service;
 
