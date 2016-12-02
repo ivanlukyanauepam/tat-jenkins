@@ -6,13 +6,15 @@
 
     //[Parallelizable(ParallelScope.Fixtures)]
     [TestFixture]
-    public class JSAlertsTests
+    public class JSAlertsTests : BaseTest
     {
+        //public TestContext TestContext { get; set; }
         private JSAlertsService service;
 
         [SetUp]
         public void BeforeTest()
         {
+            //base.Setup();
             service = new JSAlertsService(BrowserType.Chrome.ToString());
             service.OpenPage();
 
@@ -82,6 +84,7 @@
         public void AfterTest()
         {
             service.ClosePage();
+            //base.TearDown();
         }
 
     }

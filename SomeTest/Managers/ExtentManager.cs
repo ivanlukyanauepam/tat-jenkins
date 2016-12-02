@@ -1,14 +1,19 @@
 ﻿namespace SomeTest.Managers
 {
-    using NUnit.Framework;
-    using NUnit.Framework.Interfaces;
+    using System;
 
     using RelevantCodes.ExtentReports;
 
     internal class ExtentManager
     {
+        private static string reportPath = GetTargetReportPath();
+        private static string projectPath = GetCurrentProjectPath();
         private static readonly ExtentReports _instance =
-        new ExtentReports("Extent.Net.html", true);
+        new ExtentReports(reportPath, true)
+            .AddSystemInfo("Host Name", "Ivan.Lukyanau")
+            .AddSystemInfo("Environment", "QA")
+            .AddSystemInfo("User Name", "Ivan Lukyanau")
+            .LoadConfig(projectPath + "extent-config.xml");
 
         static ExtentManager() { }
 
@@ -21,48 +26,18 @@
                 return _instance;
             }
         }
-    }
 
-    public abstract class ExtentBase
-    {
-        protected ExtentReports extent;
-        protected ExtentTest test;
-
-        [OneTimeSetUp]
-        public void FixtureInit()
+        private static string GetTargetReportPath()
         {
-            extent = ExtentManager.Instance;
+            return ExtentManager.GetCurrentProjectPath() + "Reports\\MyOwnReport.html";
         }
 
-        [TearDown]
-        public void TearDown()
+        private static string GetCurrentProjectPath()
         {
-            var status = TestContext.CurrentContext.Result.Outcome.Status;
-            var stacktrace = string.IsNullOrEmpty(TestContext.CurrentContext.Result.StackTrace)
-                    ? ""
-                    : string.Format("<pre>{0}</pre>", TestContext.CurrentContext.Result.StackTrace);
-            LogStatus logstatus;
-
-            switch (status)
-            {
-                case TestStatus.Failed:
-                    logstatus = LogStatus.Fail;
-                    break;
-                case TestStatus.Inconclusive:
-                    logstatus = LogStatus.Warning;
-                    break;
-                case TestStatus.Skipped:
-                    logstatus = LogStatus.Skip;
-                    break;
-                default:
-                    logstatus = LogStatus.Pass;
-                    break;
-            }
-
-            test.Log(logstatus, "Test ended with " + logstatus + stacktrace);
-
-            extent.EndTest(test);
-            extent.Flush();
+            string path = System.Reflection.Assembly.GetCallingAssembly().CodeBase;
+            string actualPath = path.Substring(0, path.LastIndexOf("bin"));
+            return new Uri(actualPath).LocalPath;
         }
+
     }
 }
