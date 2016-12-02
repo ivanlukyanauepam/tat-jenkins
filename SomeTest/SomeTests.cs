@@ -3,7 +3,7 @@
     using System;
     using NUnit.Framework;
 
-    [TestFixture]
+    //[TestFixture]
     public class SomeTests
     {
         public static object[] CaseSourceTestData =
@@ -14,7 +14,7 @@
         };
 
         // just to test work with source
-        [Test, TestCaseSource("CaseSourceTestData")]
+        //[Test, TestCaseSource("CaseSourceTestData")]
         public void CaseSourceTest(int a, decimal b, string c)
         {
             // Can also specify the class to which the property is found upon.
