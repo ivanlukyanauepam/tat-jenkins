@@ -6,7 +6,8 @@
 
     public abstract class AbstractPage
     {
-        protected readonly BrowserInstance Browser;
+        //protected readonly BrowserInstance Browser;
+        protected readonly ThreadedBrowser Browser;
 
         protected virtual string Url
         {
@@ -26,12 +27,14 @@
 
         protected AbstractPage()
         {
-            this.Browser = BrowserInstance.Get();
+            this.Browser = ThreadedBrowser.Instance();
+            //this.Browser = BrowserInstance.Get();
         }
 
         protected AbstractPage(BrowserType browser)
         {
-            this.Browser = BrowserInstance.Get(browser);
+            this.Browser = ThreadedBrowser.Instance(browser);
+            //this.Browser = BrowserInstance.Get(browser);
         }
 
         public IWebElement GetHeaderPage()

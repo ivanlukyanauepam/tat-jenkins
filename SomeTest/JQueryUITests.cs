@@ -9,7 +9,7 @@
 
     using NUnit.Framework;
 
-    //[Parallelizable(ParallelScope.Fixtures)]
+    [Parallelizable(ParallelScope.Fixtures)]
     [TestFixture]
     public class JQueryUITests : BaseTest
     {
